@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Claude Code MCP Server</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: ui-sans-serif, system-ui, -apple-system, sans-serif; background: #0b0b0f; color: #e5e5e5; min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 2rem; }
+    h1 { font-size: 2.5rem; margin-bottom: 0.5rem; color: #fff; }
+    p { color: #a5a5a5; margin-bottom: 1.5rem; }
+    .endpoints { background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15); border-radius: 12px; padding: 1.5rem; width: 100%; max-width: 600px; }
+    .endpoint { padding: 0.5rem 0; border-bottom: 1px solid rgba(255,255,255,0.1); font-family: monospace; }
+    .endpoint:last-child { border-bottom: none; }
+    .method { color: #4ade80; font-weight: bold; margin-right: 0.5rem; }
+    .path { color: #60a5fa; }
+    .note { margin-top: 1rem; font-size: 0.875rem; color: #888; }
+  </style>
+</head>
+<body>
+  <h1>Claude Code MCP Server</h1>
+  <p>Anthropic Claude Code CLI — MCP Server API</p>
+  <div class="endpoints">
+    <div class="endpoint"><span class="method">GET</span><span class="path">/health</span> — Health check</div>
+    <div class="endpoint"><span class="method">POST</span><span class="path">/mcp</span> — MCP protocol endpoint</div>
+    <div class="endpoint"><span class="method">GET</span><span class="path">/sse</span> — Server-Sent Events</div>
+    <div class="endpoint"><span class="method">POST</span><span class="path">/messages</span> — Send messages</div>
+    <div class="endpoint"><span class="method">POST</span><span class="path">/api</span> — General API</div>
+  </div>
+  <p class="note">Requires ANTHROPIC_API_KEY environment variable.</p>
+</body>
+</html>
